@@ -1,0 +1,114 @@
+services:
+  bootnode:
+    image: ethersphere/bee:latest
+    container_name: bootnode
+    hostname: bootnode
+    restart: no
+    command: start --config /home/bee/config.bootnode.yaml
+    ports:
+      - "10633:1633" # API port
+      - "10634:1634" # P2P port
+    volumes:
+      - ./config/config.bootnode.yaml:/home/bee/config.bootnode.yaml:ro
+      - ./data/bootnode:/home/bee/.bee-data
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: '1G'
+        reservations:
+          cpus: '0.25'
+          memory: '512M'
+
+  bee1:
+    image: ethersphere/bee:latest
+    container_name: bee1
+    hostname: bee1
+    restart: no
+    command: start --config /home/bee/config.bee1.yaml
+    ports:
+      - "11633:1633" # API port
+      - "11634:1634" # P2P port
+    volumes:
+      - ./config/config.bee1.yaml:/home/bee/config.bee1.yaml:ro
+      - ./data/bee1:/home/bee/.bee-data
+    depends_on:
+      - bootnode
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: '1G'
+        reservations:
+          cpus: '0.25'
+          memory: '512M'
+
+  bee2:
+    image: ethersphere/bee:latest
+    container_name: bee2
+    hostname: bee2
+    restart: no
+    command: start --config /home/bee/config.bee2.yaml
+    ports:
+      - "12633:1633" # API port
+      - "12634:1634" # P2P port
+    volumes:
+      - ./config/config.bee2.yaml:/home/bee/config.bee2.yaml:ro
+      - ./data/bee2:/home/bee/.bee-data
+    depends_on:
+      - bootnode
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: '1G'
+        reservations:
+          cpus: '0.25'
+          memory: '512M'
+
+  bee3:
+    image: ethersphere/bee:latest
+    container_name: bee3
+    hostname: bee3
+    restart: no
+    command: start --config /home/bee/config.bee3.yaml
+    ports:
+      - "13633:1633" # API port
+      - "13634:1634" # P2P port
+    volumes:
+      - ./config/config.bee3.yaml:/home/bee/config.bee3.yaml:ro
+      - ./data/bee3:/home/bee/.bee-data
+    depends_on:
+      - bootnode
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: '1G'
+        reservations:
+          cpus: '0.25'
+          memory: '512M'
+
+  bee4:
+    image: ethersphere/bee:latest
+    container_name: bee4
+    hostname: bee4
+    restart: no
+    command: start --config /home/bee/config.instance5.yaml
+    ports:
+      - "14633:1633" # API port
+      - "14634:1634" # P2P port
+    volumes:
+      - ./config/config.instance5.yaml:/home/bee/config.instance5.yaml:ro
+      - ./data/bee4:/home/bee/.bee-data
+    depends_on:
+      - bootnode
+    deploy:
+      replicas: 0
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: '1G'
+        reservations:
+          cpus: '0.25'
+          memory: '512M'

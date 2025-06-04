@@ -1,0 +1,18 @@
+bootnode:
+bootnode-mode: true
+data-dir: /home/bee/.bee-data
+full-node: true
+mainnet: false
+network-id: 5
+password: password
+storage-incentives-enable: false
+blockchain-rpc-endpoint: https://rpc.sepolia.org/
+swap-enable: true
+swap-initial-deposit: 0
+verbosity: debug
+welcome-message: "your welcome meessage"
+warmup-time: 30s
+block-time: "12"
+p2p-addr: :1634
+p2p-ws-enable: false
+api-addr: :1633
