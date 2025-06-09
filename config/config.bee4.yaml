@@ -11,6 +11,6 @@ verbosity: info
 welcome-message: "your welcome meessage"
 warmup-time: 30s
 block-time: "12"
-p2p-addr: :1634
+p2p-addr: :14634
 p2p-ws-enable: true
 api-addr: :1633
