@@ -7,7 +7,7 @@ services:
     command: start --config /home/bee/config.bootnode.yaml
     ports:
       - "10633:1633" # API port
-      - "10634:10634" # P2P port
+      - "1634:1634" # P2P port
     volumes:
       - ./config/config.bootnode.yaml:/home/bee/config.bootnode.yaml:ro
       - ./data/bootnode:/home/bee/.bee-data
