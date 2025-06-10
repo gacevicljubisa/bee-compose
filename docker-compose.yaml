@@ -7,7 +7,7 @@ services:
     command: start --config /home/bee/config.bootnode.yaml
     ports:
       - "10633:1633" # API port
-      - "10634:1634" # P2P port
+      - "1634:1634" # P2P port
     volumes:
       - ./config/config.bootnode.yaml:/home/bee/config.bootnode.yaml:ro
       - ./data/bootnode:/home/bee/.bee-data
@@ -28,7 +28,7 @@ services:
     command: start --config /home/bee/config.bee1.yaml
     ports:
       - "11633:1633" # API port
-      - "11634:1634" # P2P port
+      - "11634:11634" # P2P port
     volumes:
       - ./config/config.bee1.yaml:/home/bee/config.bee1.yaml:ro
       - ./data/bee1:/home/bee/.bee-data
@@ -51,7 +51,7 @@ services:
     command: start --config /home/bee/config.bee2.yaml
     ports:
       - "12633:1633" # API port
-      - "12634:1634" # P2P port
+      - "12634:12634" # P2P port
     volumes:
       - ./config/config.bee2.yaml:/home/bee/config.bee2.yaml:ro
       - ./data/bee2:/home/bee/.bee-data
@@ -74,7 +74,7 @@ services:
     command: start --config /home/bee/config.bee3.yaml
     ports:
       - "13633:1633" # API port
-      - "13634:1634" # P2P port
+      - "13634:13634" # P2P port
     volumes:
       - ./config/config.bee3.yaml:/home/bee/config.bee3.yaml:ro
       - ./data/bee3:/home/bee/.bee-data
@@ -97,7 +97,7 @@ services:
     command: start --config /home/bee/config.instance5.yaml
     ports:
       - "14633:1633" # API port
-      - "14634:1634" # P2P port
+      - "14634:14634" # P2P port
     volumes:
       - ./config/config.instance5.yaml:/home/bee/config.instance5.yaml:ro
       - ./data/bee4:/home/bee/.bee-data

@@ -1,16 +1,16 @@
 bootnode:
-  - /dns4/bootnode/tcp/1634/p2p/QmX7Y13f5kRqUKijRpxBr8eBPuRnNVjLfBQ9dHNJ85k97G
+  - /dns4/bootnode/tcp/1634/p2p/QmbPUii1SGZ6hKiSQjgWV9WuGCmSGSA2L2RBpFQBHPHrTF
 data-dir: /home/bee/.bee-data
 full-node: true
 mainnet: false
 network-id: 5
 password: password
-blockchain-rpc-endpoint: https://rpc.sepolia.org/
+blockchain-rpc-endpoint: https://ethereum-sepolia-rpc.publicnode.com/ac5b7f52aabd778861c2588f872f15c5fc34f0b343ec3d18ac2e91f5526e9c2b
 swap-enable: true
 verbosity: debug
 welcome-message: "your welcome meessage"
 warmup-time: 30s
 block-time: "12"
-p2p-addr: :1634
+p2p-addr: :12634
 p2p-ws-enable: true
 api-addr: :1633
